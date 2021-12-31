@@ -1,0 +1,25 @@
+<h2>Login</h2>
+<p>Faça Login na Aplicação</p>
+
+<form [formGroup]="formDaniel" (submit)="submit()">
+    <div class="col-3">
+        <div class="row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+            <input type="text" formControlName="usuario" class="form-control" id="usuario" value="email@example.com">
+            </div>
+        </div>
+        <div class="row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+            <input type="password" formControlName="senha" class="form-control" id="senha">
+            </div>
+        </div>
+    </div>
+
+    <div style="display:flex; justify-content: center;">
+        <button type="submit" class="btn btn-primary" >Login</button>
+    </div>
+</form>
+
+<footer *ngIf="mostrarOMenu">ISSO SÓ APARECE SE ESTIVER LOGADO</footer>

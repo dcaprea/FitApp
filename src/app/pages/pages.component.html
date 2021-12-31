@@ -1,0 +1,17 @@
+<p>Lista Posts</p>
+
+<button mat-raised-button (click)="openDialog()">Cadastrar nova Fruta</button>
+
+<input type="text" [formControl]="name" />
+
+{{name.value}}
+
+<button (click)="limpa()">Limpar</button>
+
+<ul>
+    <li *ngFor="let comida of comidas | order: 'nome'">{{ comida.nome }}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let hero of posts123">{{ hero.title }}, {{ hero.date | localDateTime }}</li>
+</ul>

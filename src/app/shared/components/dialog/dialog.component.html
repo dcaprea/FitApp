@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<p>Você é um {{ data.animal }}</p>
+    <form [formGroup]="liveForm">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="liveName" name="liveName">
+      </mat-form-field>
+    </form>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+</div>
